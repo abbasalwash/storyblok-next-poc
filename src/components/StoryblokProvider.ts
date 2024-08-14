@@ -1,4 +1,5 @@
 "use client";
+import { ReactNode } from "react";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
  
 /** Import your components */
@@ -20,6 +21,7 @@ storyblokInit({
   components
 });
  
-export default function StoryblokProvider({ children }) {
+
+export default function StoryblokProvider({ children }: { children: ReactNode }) {
   return children;
 }
