@@ -10,6 +10,7 @@ import Grid from "@/components/Grid";
 import HeaderMenu from "@/components/HeaderMenu";
 import MenuLink from "@/components/MenuLink";
 import Config from "@/components/Config";
+import Hero from "./Hero";
  
 const components = {
   feature: Feature,
@@ -17,6 +18,7 @@ const components = {
   teaser: Teaser,
   page: Page,
   config: Config,
+  hero: Hero,
   'header_menu': HeaderMenu,
   'menu_link': MenuLink
 };

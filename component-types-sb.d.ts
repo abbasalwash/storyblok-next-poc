@@ -8,8 +8,20 @@ export interface ConfigStoryblok {
   [k: string]: any;
 }
 
+export interface AssetStoryblok {
+  alt?: string;
+  copyright?: string;
+  id: number;
+  filename: string;
+  name: string;
+  title?: string;
+  focus?: string;
+  [k: string]: any;
+}
+
 export interface FeatureStoryblok {
   name?: string;
+  image?: AssetStoryblok;
   component: "feature";
   _uid: string;
   [k: string]: any;
@@ -20,11 +32,21 @@ export interface GridStoryblok {
     | ConfigStoryblok
     | FeatureStoryblok
     | GridStoryblok
+    | HeroStoryblok
     | MenuLinkStoryblok
     | PageStoryblok
     | TeaserStoryblok
   )[];
   component: "grid";
+  _uid: string;
+  [k: string]: any;
+}
+
+export interface HeroStoryblok {
+  headline?: string;
+  subheadline?: string;
+  background_image?: AssetStoryblok;
+  component: "hero";
   _uid: string;
   [k: string]: any;
 }
@@ -91,7 +113,15 @@ export interface MenuLinkStoryblok {
 }
 
 export interface PageStoryblok {
-  body?: (ConfigStoryblok | FeatureStoryblok | GridStoryblok | MenuLinkStoryblok | PageStoryblok | TeaserStoryblok)[];
+  body?: (
+    | ConfigStoryblok
+    | FeatureStoryblok
+    | GridStoryblok
+    | HeroStoryblok
+    | MenuLinkStoryblok
+    | PageStoryblok
+    | TeaserStoryblok
+  )[];
   component: "page";
   _uid: string;
   [k: string]: any;

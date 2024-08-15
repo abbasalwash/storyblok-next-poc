@@ -4,7 +4,6 @@ import Link from "next/link";
 import { MenuLinkStoryblok } from "../../component-types-sb";
 
 const MenuLink = ({ blok }: { blok: MenuLinkStoryblok }) => {
-    console.log('menu_link log -> ', blok);
 
     const url = blok.link?.cached_url;
 

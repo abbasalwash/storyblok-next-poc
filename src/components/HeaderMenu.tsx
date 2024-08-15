@@ -3,7 +3,6 @@ import MenuLink from "./MenuLink";
 import { MenuLinkStoryblok } from "../../component-types-sb";
 
 const HeaderMenu = ({ blok }: {blok: MenuLinkStoryblok[]}) => {
-    console.log('header_menu log -> ', blok);
 
     return (
         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-10" {...storyblokEditable({ blok })}>

@@ -36,11 +36,18 @@
       "name": "feature",
       "display_name": null,
       "created_at": "2024-08-14T08:18:47.060Z",
-      "updated_at": "2024-08-14T08:18:47.060Z",
+      "updated_at": "2024-08-15T13:10:06.507Z",
       "id": 6166553,
       "schema": {
         "name": {
           "type": "text"
+        },
+        "image": {
+          "type": "asset",
+          "pos": 1,
+          "filetypes": [
+            "images"
+          ]
         }
       },
       "image": null,
@@ -77,6 +84,45 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "grid",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
+      "name": "hero",
+      "display_name": null,
+      "created_at": "2024-08-15T13:25:26.347Z",
+      "updated_at": "2024-08-15T13:29:17.599Z",
+      "id": 6171429,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "pos": 0
+        },
+        "subheadline": {
+          "type": "text",
+          "pos": 1
+        },
+        "background_image": {
+          "type": "asset",
+          "pos": 2,
+          "filetypes": [
+            "images"
+          ],
+          "conditional_settings": []
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "hero",
       "component_group_uuid": null,
       "color": null,
       "icon": null,
