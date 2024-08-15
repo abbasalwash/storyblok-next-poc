@@ -1,18 +1,16 @@
-// src/app/page.tsx
 import StoryblokStory from "@storyblok/react/story";
 
-import { fetchData } from "./api";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { fetchStory } from "@/helpers/api";
+import Layout from "@/components/Layout";
 
-export default async function Home() {
-  const { data } = await fetchData();
+const Home = async () => {
+  const { data } = await fetchStory();
 
   return (
-    <div>
-      <Navigation />
+    <Layout>
       <StoryblokStory story={data.story} />
-      <Footer />
-    </div>
+    </Layout>
   );
 }
+
+export default Home;

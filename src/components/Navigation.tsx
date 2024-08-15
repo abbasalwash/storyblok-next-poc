@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 const Navigation = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -12,16 +13,22 @@ const Navigation = () => {
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <Link href="/">
                             <span className="sr-only">Storyblok</span>
-                            <img
-                                className="h-20 w-auto sm:h-10 hidden sm:block"
-                                src='https://a.storyblok.com/f/88751/251x53/0d3909fe96/storyblok-primary.png'
-                                alt="Storyblok"
-                            />
-                            <img
-                                className="h-20 w-auto sm:h-10 sm:hidden"
-                                src='https://a.storyblok.com/f/88751/92x106/835caf912a/storyblok-logo.png'
-                                alt="Storyblok"
-                            />
+                            <div className="h-20 w-auto sm:h-10 hidden sm:block">
+                                <Image
+                                    src='https://a.storyblok.com/f/88751/251x53/0d3909fe96/storyblok-primary.png'
+                                    alt="Storyblok"
+                                    width={251}
+                                    height={53}
+                                />
+                            </div>
+                            <div className="h-20 w-auto sm:h-10 sm:hidden">
+                                <Image                                    
+                                    src='https://a.storyblok.com/f/88751/92x106/835caf912a/storyblok-logo.png'
+                                    alt="Storyblok"
+                                    width={106}
+                                    height={92}
+                                />
+                            </div>
                         </Link>
                     </div>
                     <div className="-mr-2 -my-2 md:hidden">
@@ -72,11 +79,12 @@ const Navigation = () => {
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                         <div className="pt-5 pb-6 px-5">
                             <div className="flex items-center justify-between">
-                                <div>
-                                    <img
-                                        className="h-8 w-auto"
+                                <div className="h-8 w-auto">
+                                    <Image                                        
                                         src="https://a.storyblok.com/f/88751/92x106/835caf912a/storyblok-logo.png"
                                         alt="Storyblok"
+                                        width={106}
+                                        height={92}
                                     />
                                 </div>
                                 <div className="-mr-2">
