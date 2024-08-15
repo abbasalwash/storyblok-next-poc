@@ -4,11 +4,11 @@ import { fetchStory } from "@/helpers/api";
 import Layout from "@/components/Layout";
 
 const Home = async () => {
-  const { data } = await fetchStory();
+  const { data: storyData } = await fetchStory(); 
 
   return (
     <Layout>
-      <StoryblokStory story={data.story} />
+      <StoryblokStory story={storyData.story} />
     </Layout>
   );
 }

@@ -1,12 +1,17 @@
-import Navigation from "./Navigation";
 import Footer from "./Footer";
+import Config from "./Config";
+import { fetchStory } from "@/helpers/api";
 
-const Layout = ({ children }: { children: React.ReactNode }) => (
-    <div>
-        <Navigation />
-        {children}
-        <Footer />
-    </div>
-);
+const Layout = async ({ children }: { children: React.ReactNode }) => {
+    const { data } = await fetchStory('config');
+    
+    return (
+        <div>
+            <Config blok={data.story.content} />
+            {children}
+            <Footer />
+        </div>
+    );
+}
 
 export default Layout;

@@ -1,27 +1,32 @@
 "use client";
+
 import { ReactNode } from "react";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
- 
-/** Import your components */
-import Page from "./Page";
-import Teaser from "./Teaser";
-import Feature from "./Feature";
-import Grid from "./Grid";
+
+import Page from "@/components/Page";
+import Teaser from "@/components/Teaser";
+import Feature from "@/components/Feature";
+import Grid from "@/components/Grid";
+import HeaderMenu from "@/components/HeaderMenu";
+import MenuLink from "@/components/MenuLink";
+import Config from "@/components/Config";
  
 const components = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
   page: Page,
+  config: Config,
+  'header_menu': HeaderMenu,
+  'menu_link': MenuLink
 };
  
 storyblokInit({
-  accessToken: "your_preview_token",
+  accessToken: process.env.ACCESS_TOKEN,
   use: [apiPlugin],
   components
 });
  
-
 export default function StoryblokProvider({ children }: { children: ReactNode }) {
   return children;
 }

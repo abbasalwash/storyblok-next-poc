@@ -1,6 +1,6 @@
 import StoryblokStory from "@storyblok/react/story";
 
-import { fetchLinks, fetchStory } from "@/helpers/api";
+import { fetchLink, fetchStory } from "@/helpers/api";
 import Layout from "@/components/Layout";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
@@ -14,7 +14,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 }
 
 export const generateStaticParams = async () => {
-  let { data } = await fetchLinks();
+  let { data } = await fetchLink();
   let paths: { slug: string }[] = [];
 
   Object.keys(data.links).forEach((linkKey) => {
